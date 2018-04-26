@@ -25,6 +25,8 @@
             <HBox alignment="CENTER" prefHeight="33.0" prefWidth="377.0">
                <children>
                   <Button id="btnBottom" fx:id="btnBottom" mnemonicParsing="false" onAction="#btnSitLeave_Click" text="Sit" />
+                  <Button fx:id="btnHitBottom" mnemonicParsing="false" text="Hit" />
+                  <Button fx:id="btnStandBottom" mnemonicParsing="false" text="Stand" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
@@ -53,6 +55,8 @@
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
                <children>
                   <Button id="btnTop" fx:id="btnTop" mnemonicParsing="false" onAction="#btnSitLeave_Click" text="Sit" />
+                  <Button fx:id="btnHitTop" mnemonicParsing="false" text="Hit" />
+                  <Button fx:id="btnStandTop" mnemonicParsing="false" text="Stand" />
                </children>
             </HBox>
          </children>

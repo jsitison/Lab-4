@@ -28,12 +28,34 @@ public class BlackJackController implements Initializable {
 	private Button btnTop;
 	@FXML
 	private Button btnBottom;
+	@FXML
+	private Button btnHitTop;
+	@FXML
+	private Button btnHitBottom;
+	@FXML
+	private Button btnStandTop;
+	@FXML
+	private Button btnStandBottom;
 
 	@FXML
 	private BorderPane mainScreen;
 
+	
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		btnBottom.setText("Sit");
+		btnTop.setText("Sit");
+		btnHitTop.setText("Hit");
+		btnHitBottom.setText("Hit");
+		btnStandTop.setText("Stand");
+		btnStandBottom.setText("Stand");
+		
+		btnHitTop.setVisible(false);
+		btnHitBottom.setVisible(false);
+		btnStandTop.setVisible(false);
+		btnStandBottom.setVisible(false);
+		
 
 	}
 
@@ -64,8 +86,16 @@ public class BlackJackController implements Initializable {
 
 		btnBottom.setText("Sit");
 		btnTop.setText("Sit");
+
 		btnBottom.setVisible(true);
 		btnTop.setVisible(true);
+		
+		btnHitTop.setVisible(false);
+		btnStandTop.setVisible(false);
+		
+		btnHitBottom.setVisible(false);
+		btnStandBottom.setVisible(false);
+		
 		lblBottomName.setText("Label");
 		lblTopName.setText("Label");
 
@@ -75,7 +105,12 @@ public class BlackJackController implements Initializable {
 				lblBottomName.setText(p.getPlayerName());
 				if (p.getPlayerID().equals(FlamingoGame.getAppPlayer().getPlayerID())) {
 					btnBottom.setText("Leave");
+					btnHitBottom.setVisible(true);
+					btnStandBottom.setVisible(true);
+					
 					btnTop.setVisible(false);
+					btnHitTop.setVisible(false);
+					btnStandTop.setVisible(false);
 				} else {
 					btnBottom.setVisible(false);
 				}
@@ -84,7 +119,12 @@ public class BlackJackController implements Initializable {
 				lblTopName.setText(p.getPlayerName());
 				if (p.getPlayerID().equals(FlamingoGame.getAppPlayer().getPlayerID())) {
 					btnTop.setText("Leave");
+					btnHitTop.setVisible(true);
+					btnStandTop.setVisible(true);
+					
 					btnBottom.setVisible(false);
+					btnHitBottom.setVisible(false);
+					btnStandBottom.setVisible(false);
 				} else {
 					btnTop.setVisible(false);
 				}
